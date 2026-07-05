@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cygnus AI</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161b26;
+            --text-color: #ffffff;
+            --text-muted: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #ec4899;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, md);
+            gap: 2rem;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #232936;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card.video:hover {
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            border-color: var(--accent-primary);
+        }
+
+        .card.chatbot:hover {
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+            border-color: var(--accent-secondary);
+        }
+
+        .card.app:hover {
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+            border-color: var(--accent-tertiary);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .card:hover .btn {
+            opacity: 0.9;
+        }
+
+        .btn-video { background-color: var(--accent-primary); color: white; }
+        .btn-chatbot { background-color: var(--accent-secondary); color: white; }
+        .btn-app { background-color: var(--accent-tertiary); color: white; }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Cygnus AI</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>The Next Generation of AI Tools</h1>
+            <p>Create, build, and automate effortlessly with the Cygnus ecosystem.</p>
+        </section>
+
+        <section class="grid">
+            <a href="aivideo-editor.html" class="card video">
+                <div>
+                    <div class="icon">🎬</div>
+                    <h2>AI Video Editor</h2>
+                    <p>Edit footage, generate special effects, and cut videos in seconds using simple text prompts.</p>
+                </div>
+                <span class="btn btn-video">Launch Editor</span>
+            </a>
+
+            <a href="https://cygnus-ai.netlify.app" class="card chatbot">
+                <div>
+                    <div class="icon">💬</div>
+                    <h2>AI Chatbots</h2>
+                    <p>Deploy intelligent, conversational agents tailored to your brand's unique data and voice.</p>
+                </div>
+                <span class="btn btn-chatbot">Manage Bots</span>
+            </a>
+
+            <a href="aiappmaker.html" class="card app">
+                <div>
+                    <div class="icon">🚀</div>
+                    <h2>AI App Maker</h2>
+                    <p>Turn ideas into fully functional web and mobile applications without writing a single line of code.</p>
+                </div>
+                <span class="btn btn-app">Build App</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cygnus AI. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
